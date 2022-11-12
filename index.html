@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagramas de flujo</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <div class="sidenav">
+        <p>Simbolos</p>
+        <div class='symbol'>
+            <button id=0 name='inicio' onclick="drawSimple('oval')">Inicio</button>
+            <button id=1 name='declaracion' onclick="drawSimple('declaration')">Declaración</button>
+            <button id=2 name='entrada' onclick="drawSimple('input')">Entrada</button>
+            <button id=3 name='salida' onclick="drawSimple('output')">Salida</button>
+            <button id=4 name='sentencia' onclick="drawSimple('sentence')">Sentencia</button>
+            <button id=5 name='condicional' onclick="drawConditional()">Condicional</button>
+            <button id=6 name='ciclo' onclick="drawCycle()">Ciclo</button>
+            <button id=7 name='fin' onclick="drawSimple('oval')">Fin</button>
+        </div>
+        <p>Opciones</p>
+        <button onclick="selectElement()">Seleccionar</button>
+        <button onclick="deleteElement()">Borrar</button>
+        <button onclick="editElement()">Editar</button>
+        <button onclick="modifyLetterSize(0)">Fuente</button>
+        <button onclick="modifyColors()">Aplicar colores</button>
+        <div id="instyle">
+            <input id="elstyle" type="color" name="elstyle" value="#00FF00">
+            <input id="outline" type="color" name="outline" value="#0000FF">
+        </div>
+        <p>Herramientas</p>
+        <button onclick="upload()" id="upload">Cargar</button>
+        <input id="fileUpload" type="file" accept="text/xml" />
+        <button onclick="save()">Guardar</button>
+    </div>
+
+    <div class="main">
+        <h1>Editor de diagramas de flujo con generación de código</h1>
+        <div class="drawable" id="drawable"></div>
+        <div class="mycode" id="mycode">
+            <button onclick="getCode()">OBTENER CODIGO</button>
+            <p id="code"></p>
+        </div>
+    </div>
+</body>
+<script src="/js/symbols.js"></script>
+<script src="/js/options.js"></script>
+<script src="/js/tools.js"></script>
+
+</html>

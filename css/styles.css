@@ -1,0 +1,357 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+}
+
+#instyle {
+    margin-left: 15px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 175px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+}
+
+.sidenav button {
+    padding: 6px 8px 6px 16px;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    display: block;
+    width: 80%;
+}
+
+.mycode button {
+    position: fixed;
+    right: 15px;
+}
+
+.sidenav p {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f1f1f1;
+    display: block;
+}
+
+.sidenav button:hover {
+    color: #2626d8;
+}
+
+.drawable,
+.mycode {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: 165px;
+    padding-left: 10px;
+    overflow-y: auto;
+}
+
+.drawable {
+    height: 65%;
+}
+
+.mycode {
+    bottom: 0;
+    height: 30%;
+    color: white;
+    text-align: left;
+    background-color: rgb(76, 42, 104);
+    padding-left: 30px;
+    padding-top: 5px;
+    border-left: rgb(155, 160, 221) solid 15px;
+}
+
+h1 {
+    margin: 0px 0px 0px 165px;
+    padding: 6px 0px 6px 0px;
+    text-align: center;
+    background-color: rgb(76, 42, 104);
+    color: rgb(255, 242, 242);
+}
+
+.oval {
+    height: 60px;
+    width: 110px;
+    border-radius: 50%;
+}
+
+.identifiers,
+.values {
+    margin: 0px;
+    text-align: center;
+}
+
+.identifiers {
+    text-align: left;
+    font-size: 15px;
+}
+
+.input .values,
+.input .identifiers {
+    transform: skew(-20deg);
+}
+
+.element {
+    position: absolute;
+    top: 0px;
+    right: 45%;
+}
+
+.vertical {
+    border-left: 6px solid black;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 120px;
+}
+
+.sentence {
+    height: 60px;
+    width: 105px;
+    background-color: rgb(55, 129, 214);
+}
+
+.declaration {
+    height: 50px;
+    width: 105px;
+    background-color: rgb(55, 129, 214);
+    border-top: 5px solid red;
+    border-bottom: 5px solid red;
+    border-right: 0px;
+    border-left: 0px;
+}
+
+.output {
+    height: 60px;
+    width: 105px;
+    clip-path: polygon( 0 10%, 10% 0, 100% 0, 100% 10%, 100% 100%, 100% 100%, 10% 100%, 0% 100%, 0% 10%);
+}
+
+.input {
+    height: 60px;
+    width: 105px;
+    transform: skew(20deg);
+}
+
+.condition {
+    top: 70px;
+    right: 30px;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    border: solid 1px black;
+    transform-origin: left center;
+    transform: rotate(45deg);
+}
+
+.condition .values {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+div[name=true] {
+    height: 60px;
+    width: 105px;
+    position: absolute;
+    left: -10px;
+    top: 80px;
+}
+
+div[name=inc] {
+    height: 60px;
+    width: 105px;
+    position: absolute;
+    left: 95px;
+    top: 80px;
+}
+
+div[name=false] {
+    height: 60px;
+    width: 105px;
+    position: absolute;
+    right: 0px;
+    top: 151px;
+}
+
+div[name=trueFor] {
+    height: 60px;
+    width: 105px;
+    position: absolute;
+    right: 0px;
+    top: 151px;
+}
+
+div[name=falseFor] {
+    height: 60px;
+    width: 105px;
+    position: absolute;
+    right: 0px;
+    top: 230px;
+}
+
+.verticalConditional {
+    border-left: 6px solid black;
+    height: 20px;
+    position: absolute;
+    right: 54px;
+    top: 131px;
+}
+
+.verticalTrueInc {
+    border-left: 6px solid black;
+    height: 40px;
+    position: absolute;
+    right: -45px;
+    top: 140px;
+}
+
+.verticalFalseConditional {
+    border-left: 6px solid black;
+    height: 155px;
+    position: absolute;
+    left: -20px;
+    top: 105px;
+}
+
+.verticalFalse {
+    border-left: 6px solid black;
+    height: 20px;
+    position: absolute;
+    right: 54px;
+    top: 210px;
+}
+
+.verticalTrue {
+    border-left: 6px solid black;
+    height: 90px;
+    position: absolute;
+    left: 50px;
+    top: 140px;
+}
+
+.horizontalConditional {
+    border-left: 6px solid black;
+    height: 20px;
+    position: absolute;
+    right: 17px;
+    top: 95px;
+    transform: rotate(90deg);
+}
+
+.horizontalTrueInc {
+    border-left: 6px solid black;
+    height: 40px;
+    position: absolute;
+    right: -23px;
+    top: 157px;
+    transform: rotate(90deg);
+}
+
+.horizontalFalseConditional1 {
+    border-left: 6px solid black;
+    height: 20px;
+    position: absolute;
+    left: -13px;
+    top: 250px;
+    transform: rotate(90deg);
+}
+
+.horizontalFalseConditional2 {
+    border-left: 6px solid black;
+    height: 42px;
+    position: absolute;
+    left: -2px;
+    top: 85px;
+    transform: rotate(90deg);
+}
+
+.horizontalConditionalTrue {
+    border-left: 6px solid black;
+    height: 40px;
+    position: absolute;
+    right: 27px;
+    top: 65px;
+    transform: rotate(90deg);
+}
+
+.horizontalTrueFalse {
+    border-left: 6px solid black;
+    height: 105px;
+    position: absolute;
+    left: -5px;
+    top: 174.4px;
+    transform: rotate(90deg);
+}
+
+.verticalTrueConditional {
+    border-left: 6px solid black;
+    height: 20px;
+    position: absolute;
+    right: 54px;
+    top: 60px;
+}
+
+.verticalConditionalTrue {
+    border-left: 6px solid black;
+    height: 48px;
+    position: absolute;
+    right: 9px;
+    top: 60px;
+}
+
+div[name=trueDowhile] div[name=init] {
+    height: 60px;
+    width: 105px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+#fileUpload {
+    color: transparent;
+}
+
+#fileUpload::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+#fileUpload::before {
+    content: 'Select some files';
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 10px 20px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 8pt;
+    margin-left: 16px;
+}
+
+#fileUpload:hover::before {
+    border-color: black;
+}
+
+#fileUpload:active {
+    outline: 0;
+}
+
+#fileUpload:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
